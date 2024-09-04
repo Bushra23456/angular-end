@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 mx-auto mt-5">
+          <form ngForm="#form" (ngSubmit)="add()">
+          <mat-form-field>
+            <mat-label >Name</mat-label>
+            <input matInput type="text" name="name" [(ngModel)]="userdata.name">
+          </mat-form-field>
+          <br>
+          <mat-form-field >
+            <mat-label >EMAIL</mat-label>
+            <input matInput type="email" name="email" [(ngModel)]="userdata.email">
+          </mat-form-field>
+          <br>
+          <mat-form-field >
+            <mat-label >Password</mat-label>
+            <input matInput  type="password" name="password" [(ngModel)]="userdata.password">
+          </mat-form-field>
+          <br>
+          <mat-form-field >
+            <mat-label >IMAGE</mat-label>
+            <input matInput  type="text" >
+            <input  type="file" name="image" [(ngModel)]="userdata.image" (change)="fileselected($event)" >
+
+          </mat-form-field>
+          <br>
+          <button mat-button type="submit">Submit</button>
+        </form>
+            <!-- <form (ngSubmit)="add()" ngForm="#form">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Name</label>
+                    <input type="text" name="name" [(ngModel)]="userdata.name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input type="email" name="email" [(ngModel)]="userdata.email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input type="password" name="password" [(ngModel)]="userdata.password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">IMAGE</label>
+                  <input type="file" name="image" [(ngModel)]="userdata.image" (change)="fileselected($event)" class="form-control" id="exampleInputPassword1">
+                </div> -->
+            
+                
+                <!-- <button type="submit" class="btn btn-primary">Submit</button>
+              </form> -->
+        </div>
+    </div>
+</div>
